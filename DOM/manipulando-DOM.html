@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Encontrando múltiplos elementos DOM pela tag ou class name</title>
+    </head>
+    <body>
+        <h1 id="heading">Tudo sobre cachorros</h1>
+       <p>O <span class="animal">cachorro</span> doméstico é conhecido como o melhor amigo do homem. 
+          O <span class="animal">cachorro</span> foi o primeiro animal domesticado e tem sido amplamente mantido 
+          como um companheiro de trabalho, de caça e de estimação. De acordo com estimativas grosseiras recentes,
+          existem atualmente entre 700 milhões e um bilhão de 
+         <span class="animal">cachorro</span>s, tornando-os os predadores mais abundantes do mundo.
+       <a href="http://en.wikipedia.org/wiki/Dog">Leia mais na Wikipedia</a>.</p>
+         <img src="https://www.kasandbox.org/programming-images/animals/dog_sleeping-puppy.png" height="150">
+         <img src="https://www.kasandbox.org/programming-images/animals/dogs_collies.png" height="150">
+        <script>
+            /* 
+             1.Find the DOM node using an access method.
+             2.Manipulate the DOM node by changing its attributes, styles, inner HTML, or appending new nodes to it.
+
+            */
+            // document.body
+            var headingEl = document.getElementById("heading");
+            headingEl.innerHTML = "Tudo sobre gatos";
+            var nameEls = document.getElementsByClassName("animal");
+            console.log(nameEls);
+            // cmd-option-i , ctrl-shift
+            // HTMLCollection
+            console.log(nameEls[0]);
+            for (var i = 0; i < nameEls.length; i++) {
+                nameEls[i].innerHTML = "gato";
+            }
+        </script>
+    </body>
+</html>
