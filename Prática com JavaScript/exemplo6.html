@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Prática com JavaScript</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <p id="myP" onmousedown="mouseDown()" onmouseup="mouseUp()">
+        Clique neste texto e mantenha o botão pressionado. 
+        Repare que o texto mudará da cor PRETO para VERMELHO.
+        Ao soltar o botão, o texto ficará na cor VERDE!</p>
+    <script>
+        function mouseDown(){
+            document.getElementById("myP").style.color="red";
+        }
+        function mouseUp(){
+            document.getElementById("myP").style.color="blue";
+        }
+    </script>    
+  </body>
+</html>

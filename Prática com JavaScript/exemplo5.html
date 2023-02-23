@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Prática com JavaScript</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <p>Um novo exemplo de como implementar o "ondblclick".</p>
+    <p id="demo" ondblclick="myFunction()">Clique duas vezes aqui.</p>
+    <script>
+        function myFunction(){
+            document.getElementById("demo").innerHTML="Ops, você clicou duas vezes aqui !";
+        }
+    </script>    
+  </body>
+</html>
